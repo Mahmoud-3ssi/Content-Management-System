@@ -33,4 +33,10 @@ class Post extends Model
     {
         return $this->belongsTo(User::class, 'auther_id', 'id');
     }
+
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
