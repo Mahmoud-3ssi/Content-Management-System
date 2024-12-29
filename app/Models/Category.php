@@ -16,4 +16,17 @@ class Category extends Model
     const SCIENCE = 'Science';
     const SPORTS = 'Sports';
     const POLITICS = 'Politics';
+
+
+    public const CATEGORIES = [
+        self::TECHNOLOGY,
+        self::HEALTH_AND_WELLNESS,
+        self::LIFESTYLE,
+        self::BUSINESS_AND_FINANCE,
+        self::ENTERTAINMENT,
+        self::EDUCATION,
+        self::SCIENCE,
+        self::SPORTS,
+        self::POLITICS
+    ];
 }
