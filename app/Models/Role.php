@@ -16,4 +16,13 @@ class Role extends Model
     const CONTRIBUTOR = 'contributer';
 
     const READER = 'reader';
+
+
+
+    public const ROLES = [
+        self::ADMIN,
+        self::EDITOR,
+        self::AUTHOR,
+        self::READER
+    ];
 }
