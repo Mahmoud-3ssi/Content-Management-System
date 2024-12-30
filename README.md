@@ -78,3 +78,11 @@ It uses **token-based authentication.**
 | slug       | VARCHAR(255) | UNIQUE, NOT NULL                                      |
 | created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
 | updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
+
+### <span id='postTagTable'> Post_Tag Table: <span>
+
+| Column  | Type   | Constraints                 |
+| ------- | ------ | --------------------------- |
+| id      | BIGINT | PRIMARY KEY, AUTO_INCREMENT |
+| post_id | BIGINT | FOREIGN KEY -> Posts(id)    |
+| tag_id  | BIGINT | FOREIGN KEY -> Tags(id)     |
