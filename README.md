@@ -86,3 +86,14 @@ It uses **token-based authentication.**
 | id      | BIGINT | PRIMARY KEY, AUTO_INCREMENT |
 | post_id | BIGINT | FOREIGN KEY -> Posts(id)    |
 | tag_id  | BIGINT | FOREIGN KEY -> Tags(id)     |
+
+### <span id='commentsTable'> Comments Table: <span>
+
+| Column     | Type      | Constraints                                           |
+| ---------- | --------- | ----------------------------------------------------- |
+| id         | BIGINT    | PRIMARY KEY, AUTO_INCREMENT                           |
+| post_id    | BIGINT    | FOREIGN KEY -> Posts(id)                              |
+| user_id    | BIGINT    | FOREIGN KEY -> Users(id)                              |
+| content    | Text      | NOT NULL                                              |
+| created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP                             |
+| updated_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
