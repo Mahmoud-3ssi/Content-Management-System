@@ -68,3 +68,13 @@ It uses **token-based authentication.**
 | slug       | VARCHAR(255) | UNIQUE, NOT NULL                                      |
 | created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
 | updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
+
+### <span id='tagsTable'> Tags Table: <span>
+
+| Column     | Type         | Constraints                                           |
+| ---------- | ------------ | ----------------------------------------------------- |
+| id         | BIGINT       | PRIMARY KEY, AUTO_INCREMENT                           |
+| name       | VARCHAR(255) | NOT NULL                                              |
+| slug       | VARCHAR(255) | UNIQUE, NOT NULL                                      |
+| created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
+| updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
