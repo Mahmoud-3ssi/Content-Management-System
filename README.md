@@ -35,3 +35,12 @@ It uses **token-based authentication.**
 | role_id    | BIGINT       | FOREIGN KEY -> Roles(id)                              |
 | created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
 | updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
+
+-   ### <span id='rolesTable'> Roles Table: <span>
+
+| Column     | Type         | Constraints                                           |
+| ---------- | ------------ | ----------------------------------------------------- |
+| id         | BIGINT       | PRIMARY KEY, AUTO_INCREMENT                           |
+| name       | VARCHAR(255) | NOT NULL                                              |
+| created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
+| updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
