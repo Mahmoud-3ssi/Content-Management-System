@@ -21,3 +21,17 @@ It uses **token-based authentication.**
 -   [Endpints](#endpoints)
 
 -   [Relationships](#relationships)
+
+## <span id='databaseSchema'>Database Schema <span>
+
+-   ### <span id='usersTable'> Users Table: <span>
+
+| Column     | Type         | Constraints                                           |
+| ---------- | ------------ | ----------------------------------------------------- |
+| id         | BIGINT       | PRIMARY KEY, AUTO_INCREMENT                           |
+| name       | VARCHAR(255) | NOT NULL                                              |
+| email      | VARCHAR(255) | UNIQUE, NOT NULL                                      |
+| password   | VARCHAR(255) | NOT NULL                                              |
+| role_id    | BIGINT       | FOREIGN KEY -> Roles(id)                              |
+| created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
+| updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
