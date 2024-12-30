@@ -44,3 +44,17 @@ It uses **token-based authentication.**
 | name       | VARCHAR(255) | NOT NULL                                              |
 | created_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
 | updated_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
+
+-   ### <span id='postsTable'> Posts Table: <span>
+
+| Column       | Type         | Constraints                                           |
+| ------------ | ------------ | ----------------------------------------------------- |
+| id           | BIGINT       | PRIMARY KEY, AUTO_INCREMENT                           |
+| title        | VARCHAR(255) | NOT NULL                                              |
+| slug         | VARCHAR(255) | UNIQUE, NOT NULL                                      |
+| body         | TEXT         | NOT NULL                                              |
+| author_id    | BIGINT       | FOREIGN KEY -> Users(id)                              |
+| category_id  | BIGINT       | FOREIGN KEY -> Categories(id)                         |
+| published_at | TIMESTAMP    | NULLABLE                                              |
+| created_at   | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP                             |
+| updated_at   | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP |
