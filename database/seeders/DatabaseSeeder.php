@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
         User::factory(20)->create();
 
         Post::factory(100)->create();
+
+        Tag::factory(30)->create();
     }
 }
