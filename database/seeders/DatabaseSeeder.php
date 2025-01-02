@@ -23,5 +23,7 @@ class DatabaseSeeder extends Seeder
         Post::factory(100)->create();
 
         Tag::factory(30)->create();
+
+        $this->call(PostTagSeeder::class);
     }
 }
