@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
 
         User::factory(20)->create();
+
+        Post::factory(100)->create();
     }
 }
