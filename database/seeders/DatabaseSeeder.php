@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
         Tag::factory(30)->create();
 
         $this->call(PostTagSeeder::class);
+
+        $this->call(CommentSeeder::class);
     }
 }
