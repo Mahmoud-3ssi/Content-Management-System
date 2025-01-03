@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+Route::fallback(function () {
+    return response()->json([
+        'message' => 'Not found, Check the url and try again',
+    ], 404);
+});
